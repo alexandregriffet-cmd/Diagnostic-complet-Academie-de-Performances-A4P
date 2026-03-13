@@ -1,0 +1,27 @@
+GUIDE_RACCORDEMENT_A4P.txt
+
+Ajoute synthese.html à la racine du dépôt du hub.
+
+Pour alimenter la synthèse automatiquement, ajoute à la fin du calcul des résultats dans chaque test les clés localStorage suivantes :
+
+Identité commune :
+a4p_name
+a4p_firstname
+a4p_sport
+
+PMP :
+a4p_pmp_profile
+a4p_pmp_projection
+a4p_pmp_adaptation
+
+CMP :
+a4p_cmp_profile
+a4p_cmp_engagement
+a4p_cmp_resilience
+
+Psycho :
+a4p_psy_profile
+a4p_psy_regulation
+a4p_psy_stress
+
+Tant que les scores ne sont pas branchés, la page estime visuellement les axes à partir des profils textuels.
