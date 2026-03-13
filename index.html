@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diagnostic Mental du Sportif | A4P</title>
+  <style>
+    :root {
+      --bg: #f4f6f9;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #5b6472;
+      --primary: #1e3a5f;
+      --primary-2: #294d7a;
+      --border: #e6ebf2;
+      --shadow: 0 18px 42px rgba(15, 23, 42, 0.10);
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 24px;
+    }
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 34px 28px 42px;
+    }
+    .top {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+    .logo {
+      max-width: 260px;
+      width: 100%;
+      height: auto;
+      margin: 0 auto 12px;
+      display: block;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 13px;
+      background: #eef3f9;
+      color: var(--primary);
+      border: 1px solid #dbe6f3;
+      padding: 7px 12px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 36px;
+      line-height: 1.12;
+      color: var(--primary);
+    }
+    .subtitle {
+      margin: 0 auto;
+      max-width: 900px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 32px;
+    }
+    .card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, #ffffff 0%, #f9fbfe 100%);
+      padding: 24px;
+      text-align: left;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .module {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      color: #6b7280;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 26px;
+      color: var(--primary);
+      line-height: 1.15;
+    }
+    .card p {
+      margin: 0 0 18px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+    .meta {
+      margin: 0 0 18px;
+      padding-left: 18px;
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+    .meta li { margin-bottom: 2px; }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--primary);
+      color: #fff;
+      padding: 13px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      text-align: center;
+      transition: .15s ease;
+      border: 1px solid transparent;
+    }
+    .btn:hover { background: var(--primary-2); }
+    .synthese {
+      margin-top: 30px;
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+      text-align: center;
+    }
+    .synthese h2 {
+      margin: 0 0 10px;
+      color: var(--primary);
+      font-size: 30px;
+    }
+    .synthese p {
+      max-width: 850px;
+      margin: 0 auto 20px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn.secondary {
+      background: #fff;
+      color: var(--primary);
+      border-color: #c9d8ea;
+    }
+    .footer {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 13px;
+      color: #6b7280;
+    }
+    @media (max-width: 980px) {
+      .grid { grid-template-columns: 1fr; }
+      h1 { font-size: 30px; }
+      .wrap { padding: 24px 18px 30px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <img class="logo" src="data:image/jpeg;base64,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" alt="Académie de Performances A4P">
+      <div class="badge">Académie de Performances • A4P</div>
+      <h1>Diagnostic Mental du Sportif</h1>
+      <p class="subtitle">
+        Un environnement unique pour lancer les trois modules A4P :
+        <strong>Profil Mental de Performance</strong>,
+        <strong>Compétences Mentales</strong> et
+        <strong>Équilibre Psycho-Émotionnel</strong>, puis accéder à une synthèse globale.
+      </p>
+    </div>
+
+    <div class="grid">
+      <section class="card">
+        <div>
+          <div class="module">Module 1</div>
+          <h2>Profil Mental (PMP)</h2>
+          <p>Analyse du fonctionnement mental du sportif : structure cognitive, projection, stratégie, adaptation et dynamique de décision.</p>
+          <ul class="meta">
+            <li>116 questions actives</li>
+            <li>8 dimensions mentales</li>
+            <li>Radar mental</li>
+            <li>Rapport long imprimable</li>
+          </ul>
+        </div>
+        <a class="btn" href="https://alexandregriffet-cmd.github.io/PMP-Acad-mie-de-Performances-/">Lancer le test PMP</a>
+      </section>
+
+      <section class="card">
+        <div>
+          <div class="module">Module 2</div>
+          <h2>Compétences Mentales (CMP)</h2>
+          <p>Évaluation des habiletés mentales de performance : concentration, engagement, discipline, résilience et régulation dans l’action.</p>
+          <ul class="meta">
+            <li>Module complémentaire</li>
+            <li>Lecture centrée performance</li>
+            <li>Usage jeune / parent / coach</li>
+            <li>Intégrable au hub A4P</li>
+          </ul>
+        </div>
+        <a class="btn" href="https://alexandregriffet-cmd.github.io/CMP_academie_performances.html/">Lancer le test CMP</a>
+      </section>
+
+      <section class="card">
+        <div>
+          <div class="module">Module 3</div>
+          <h2>Équilibre Psycho-Émotionnel</h2>
+          <p>Analyse du stress, de la sécurité intérieure, de la régulation émotionnelle, de l’énergie mentale et de la dynamique motivationnelle.</p>
+          <ul class="meta">
+            <li>120 questions</li>
+            <li>6 dimensions</li>
+            <li>24 sous-dimensions</li>
+            <li>Rapport détaillé + radar</li>
+          </ul>
+        </div>
+        <a class="btn" href="https://alexandregriffet-cmd.github.io/Module-psycho-motionnelle-/">Lancer le module psycho-émotionnel</a>
+      </section>
+    </div>
+
+    <section class="synthese">
+      <h2>Cartographie mentale A4P</h2>
+      <p>
+        Quand les trois modules sont complétés, ouvre la synthèse globale pour afficher la lecture croisée du fonctionnement mental,
+        des compétences mentales et de l’équilibre psycho-émotionnel.
+      </p>
+      <div class="actions">
+        <a class="btn" href="https://alexandregriffet-cmd.github.io/Diagnostic-complet-Academie-de-Performances-A4P/synthese.html">Ouvrir la synthèse A4P</a>
+        <a class="btn secondary" href="https://alexandregriffet-cmd.github.io/Diagnostic-complet-Academie-de-Performances-A4P/">Actualiser le hub</a>
+      </div>
+    </section>
+
+    <div class="footer">
+      Hub A4P • liens directs vers les trois tests actifs et la synthèse globale.
+    </div>
+  </div>
+</body>
+</html>
